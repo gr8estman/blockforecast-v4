@@ -4,7 +4,7 @@
 > Markets resolve themselves. Tokens are born from consensus.
 > No human touches the outcome.
 
-This is the fourth iteration of BlockForecast — a complete rebuild that takes everything learned from V1, V2, and V3 and turns it into a production-grade system. Every component was designed from scratch: the trading engine, the oracle, the smart contracts, the frontend, and the metamorphosis pipeline.
+Three versions of a Solana trading terminal came first. This is what they were building toward.
 
 Built entirely solo. Zero external funding. Testnet deployed and processing real trades.
 
@@ -86,14 +86,20 @@ A prediction market platform where:
 
 ---
 
-## The Versions
+## How We Got Here
 
-| Version | What Changed |
+V1, V2, and V3 were all Solana trading terminals — real-time token intelligence, risk scoring, MEV-protected execution. Three iterations of the same problem: how do you cut through the noise on a chain that mints 20,000 tokens a day?
+
+By V3 the infrastructure was battle-tested. Kafka protobuf stream for sub-second detection. Jito bundles for execution. A 12-point rug scoring engine. The data pipelines were solid.
+
+V4 is the pivot. Take that infrastructure — the data ingestion, the execution layer, the AI integration — and apply it to prediction markets. Not trading terminals. Not token snipers. A platform where anyone can create a binary market, trade it, and have it resolve autonomously via AI consensus.
+
+| Version | What It Was |
 |---------|-------------|
-| V1 | First working prediction market. Basic UI, wallet integration, on-chain settlement. Proved the concept. |
-| V2 | Full rebuild. Real trading engine, AI oracle introduced, proper smart contract architecture. |
-| V3 | Parallel build — real-time Solana trading terminal (Kafka sniper, MEV protection, rug detection). Applied infrastructure learnings back to prediction markets. |
-| **V4** | **Everything unified. LSMR/CLOB hybrid, 7-agent self-improving oracle, MetamorphosisEngine, social trading, production-ready.** |
+| [V1](https://github.com/gr8estman/BlockForecast) | Solana trading terminal. 12-Point Omniverse Math scoring engine, Ghost Mode paper trading, DeepChain forensics, Gemini AI research agent. |
+| [V2](https://github.com/gr8estman/blockforecast-v2) | Terminal rebuilt with real-time dashboard — live market ticker, 2-second polling, BirdEye → BitQuery fallback, WebSocket broadcaster. |
+| [V3](https://github.com/gr8estman/blockforecast-v3) | Full Next.js rewrite. Kafka protobuf sniper, Jito MEV bundles, pump.fun API, rug analysis suite, smart money tracker, Twitter bot. |
+| **V4** | **The pivot. Autonomous prediction markets on Base L2. Everything the terminals taught, applied to a harder problem.** |
 
 ---
 
