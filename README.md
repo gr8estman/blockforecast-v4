@@ -8,6 +8,8 @@ Three versions of a Solana trading terminal came first. This is what they were b
 
 Built entirely solo. Zero external funding. Testnet deployed and processing real trades.
 
+**Live now**: [blockforecast.io](https://blockforecast.io) · API docs: [docs.blockforecast.io](https://docs.blockforecast.io) · Claude Code skill: [bf-create-market](https://github.com/gr8estman/blockforecast-skills)
+
 ---
 
 ## What It Is
@@ -105,12 +107,39 @@ V4 is the pivot. Take that infrastructure — the data ingestion, the execution 
 
 ## Status
 
-- Testnet deployed and processing real trades
+- Live at [blockforecast.io](https://blockforecast.io) — engine processing real trades on Base
 - Oracle running: 7 agents, real API calls, real consensus
-- Admin + Telegram bot operational
+- Admin + Telegram bot operational — full button-driven menu hub for non-dev operators
 - MetamorphosisEngine implemented (Oracle Launcher — see [oracle-launcher-bags](https://github.com/gr8estman/oracle-launcher-bags))
-- Frontend: all core pages live
+- Frontend: all core pages live, including the creator-application flow at [/apply](https://blockforecast.io/apply)
+- Public API + x402 agent endpoints — full reference at [docs.blockforecast.io](https://docs.blockforecast.io)
+- Claude Code skill — install [`bf-create-market`](https://github.com/gr8estman/blockforecast-skills) to spin up markets via slash command
 
 ---
 
-[blockforecast.io](https://blockforecast.io) · [@blockforecasthq](https://x.com/blockforecasthq)
+## Build agents on BlockForecast
+
+The platform is designed for AI agents from day one:
+
+- **Public REST API** — wallet-signed `bf_…` keys, 60 req/min, full market + trading surface
+- **x402 endpoints** — agents pay USDC per request, no signup, no API key. Standard HTTP 402 Payment Required protocol on Base
+- **`/bf-create-market` Claude Code skill** — install once, run a slash command, the skill wraps the full x402 + creator-fee flow
+- **Open creator program** — any approved wallet can publish markets via website, REST, or x402; same approval, same identity
+
+[Full developer reference at docs.blockforecast.io](https://docs.blockforecast.io)
+
+---
+
+## Repos
+
+| Repo | What's there |
+|------|--------------|
+| [blockforecast.io](https://blockforecast.io) | The live app |
+| [blockforecast-v4](https://github.com/gr8estman/blockforecast-v4) | This — system documentation |
+| [docs](https://github.com/gr8estman/docs) | Mintlify source for [docs.blockforecast.io](https://docs.blockforecast.io) |
+| [blockforecast-skills](https://github.com/gr8estman/blockforecast-skills) | Claude Code skills (`/bf-create-market` + planned siblings) |
+| [oracle-launcher-bags](https://github.com/gr8estman/oracle-launcher-bags) | MetamorphosisEngine — markets → tokens on Solana |
+
+---
+
+[blockforecast.io](https://blockforecast.io) · [docs.blockforecast.io](https://docs.blockforecast.io) · [@blockforecasthq](https://x.com/blockforecasthq) · [support@blockforecast.io](mailto:support@blockforecast.io)
